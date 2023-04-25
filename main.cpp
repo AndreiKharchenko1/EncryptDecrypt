@@ -266,6 +266,7 @@ void keyE(){
     generate_keys(n, e, d);
     encrypt_public_private_key(Mensaje, n, e);
     cout << "\nPublic key (n,e) is : (" << n << ", " << e << ")" << endl;
+    cout << "\n Private key (d) is : (" << d << ")" << endl;
     main();
 }
 
@@ -288,8 +289,10 @@ void keyD(){
     }
 
     int n, d;
-    cout << "\n Public key (n,d) : ";
-    cin >> n >> d;
+    cout << "\n Public key (n) : ";
+    cin >> n;
+    cout << "\Private key (d) : ";
+    cin >> d;
     cout << "\nDecrypted Message is : " << decrypt_public_private_key(arr, 100, n, d) << endl;
     main();
 }
